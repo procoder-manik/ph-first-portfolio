@@ -9,9 +9,9 @@ body {
 }  
 header {
     /* background: #50b3a2; */
-    color: #fff;
+    /* color: #fff; */
     /* padding: 20px 0; */
-    text-align: center;
+    /* text-align: center; */
     /* margin-bottom: 20px; */
 }
 
@@ -32,15 +32,43 @@ header {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    border: none;
 }
 
 
 
 
 /* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;    
+   
+    }
+nav {
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+#logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000; 
+    font-weight: 900;
+}
+#logo span{
+    color: #FD6E0A;
+}
+
 /* Navigation */
 nav a {
-    color: #fff;
+    color: #000000;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
