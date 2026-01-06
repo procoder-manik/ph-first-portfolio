@@ -1,0 +1,192 @@
+<style>
+ .animate-charcter
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  text-align:center !Important;
+      font-size: 55px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+</style>
+
+
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter"> Check Out The Before and After Shots</h3>
+    </div>
+
+
+
+    <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+</head>
+<style>
+.oldcontainer {
+  max-width: 800px;
+  margin:0 auto;
+}
+
+#comparison {
+  width: 100%;
+height: 500px;  overflow: hidden;
+  position: relative;
+}
+
+figure {
+  position: absolute;
+  background-image: url(https://static1.squarespace.com/static/632cad1bcd38e003eb2d978e/t/63ea662043401a1788f11af0/1676305974957/paint+correction.png);
+  background-size: cover;
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+ margin: 0 !important;
+}
+
+#divisor {
+  background-image: url(https://static1.squarespace.com/static/632cad1bcd38e003eb2d978e/t/63ea66619ec8d51fc9a84d30/1676306027979/after.png);
+  background-size: cover;
+  position: absolute;
+  width: 50%;
+  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  height: 100%;
+}
+#divisor::before, #divisor::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  width: 4px;
+  height: calc(50% - 25px);
+  background: white;
+  z-index: 3;
+}
+#divisor::before {
+  top: 0;
+  box-shadow: 0 -3px 8px 1px rgba(0, 0, 0, 0.3);
+}
+#divisor::after {
+  bottom: 0;
+  box-shadow: 0 3px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#handle {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 1;
+}
+#handle::before, #handle::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 6px inset transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+}
+#handle::before {
+  border-right: 6px solid white;
+  left: 50%;
+  margin-left: -17px;
+}
+#handle::after {
+  border-left: 6px solid white;
+  right: 50%;
+  margin-right: -17px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  width: calc(100% + 50px);
+  z-index: 2;
+}
+input[type=range]:focus, input[type=range]:active {
+  border: none;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: transparent;
+  border: 4px solid white;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 15px;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  outline: none;
+}
+</style>
+<body>
+<!-- partial:index.partial.html -->
+<div class="oldcontainer">
+  <div id="comparison">
+    <figure>
+      <div id="handle"></div>
+      <div id="divisor"></div>
+    </figure>
+    <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+  </div>
+ </div>
+<!-- partial -->
+  <script>
+  var divisor = document.getElementById("divisor"),
+    handle = document.getElementById("handle"),
+    slider = document.getElementById("slider");
+
+function moveDivisor() {
+  handle.style.left = slider.value+"%";
+	divisor.style.width = slider.value+"%";
+}
+
+window.onload = function() {
+	moveDivisor();
+};
+  
+  </script>
+
+</body>
+</html>
