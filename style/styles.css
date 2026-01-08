@@ -31,7 +31,7 @@ body {
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .flex{
@@ -205,30 +205,152 @@ main{
 
 /*====== Services Section ======*/
 #services {
-    margin: 130px 0;
+    margin-top: 130px;
     
 }
 
 .services-items{
     margin-top: 50px;
-    gap: 20px;
+    gap: 24px;
+    
 }
 .service-item{
-    padding: 20px;
-    border: none;
+    padding: 30px;
+    
     border-radius: 5px;
-    box-shadow: 0 6px 50px rgba(0, 0, 0,0, 0.06);
+    box-shadow: 0 6px 50px 0 rgba(0, 0, 0, 0.06);
 }
 .service-item img{
     width: 44px;
     height: 44px;
+    margin-bottom: 30px;
 }
 .service-item h3{
-    font-size: 25px;
+    font-size: 20px;
     color: #181818;
-    margin-top: 25px;
+    margin-bottom: 20px;
 }
 .service-item p{
     font-size: 16px;
+    /* color: #757575; */
+    line-height: 28px;
+}
+
+/*=============== Resume Section =============*/
+#resume {
+    margin-top: 130px;
+}
+.resume-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+.education,
+.experience {   
+    margin-top: 113px;
+}
+.education h3,
+.experience h3 {
+    font-size: 30px;
+    color: #181818;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+.education-item,
+.experience-item {
+    margin-bottom: 10px;
+}
+.education-item h4,
+.experience-item h4 {
+    font-size: 25px;
+    color: #181818;
+    font-weight: 700;
+}
+.education-item .institute,
+.experience-item .institute {
+    font-size: 20px;
     color: #757575;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.education-item .institute p,
+.experience-item .institute p {
+    font-size: 16px;
+    color: #757575;
+    font-weight: 400;
+}
+.education-item hr, .experience-item hr {
+    margin: 30px 0;
+    color: #D1D1D1;
+}
+.download-btn {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/*================= Footer Section =============*/
+footer {
+    background: #fff8f3;
+    /* padding: 40px 0; */
+    margin-top: 105px;
+}
+.footer-container {
+    display: flex;
+    align-items: flex-start; /* IMPORTANT */
+    justify-content: space-between;
+    gap: 117px;
+    padding-top: 138px;
+}
+.footer-content, .footer-form {
+    width: 50%;
+    max-width: 562px;
+    
+}
+footer .contact-title {
+    font-size: 35px;
+    color: #181818;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.footer-content p {
+    font-size: 16px;
+    color: #757575;
+    line-height: 28px;
+    margin-bottom: 30px;
+    width: 562px;
+}   
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+.social-icons a { 
+    margin-right: 24px;
+    
+}
+.footer-form .form-group {
+    margin-bottom: 24px;
+}
+.contact-form{
+    width: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #d1d1d133;
+    font-size: 14px;
+    color: #757575;
+    margin-top: 50px;
+    background: linear-gradient( 0deg, #e65c003b, #ffffff03);
 }
